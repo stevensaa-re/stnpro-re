@@ -49,21 +49,56 @@
     });
   });
 
-  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-  const observer = new IntersectionObserver((entries) => {
+  const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('visible');
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.1 });
 
-  document.querySelectorAll('.biodata-card, .skills-card, .service-card, .partner-card, .section-header').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+  document.querySelectorAll('.section-header').forEach(el => {
+    sectionObserver.observe(el);
+  });
+
+  const animateObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    animateObserver.observe(el);
+  });
+
+  const serviceObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card').forEach(el => {
+    serviceObserver.observe(el);
+  });
+
+  const partnerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.partner-card').forEach(el => {
+    partnerObserver.observe(el);
   });
 
   const skillBars = document.querySelectorAll('.skill-progress');
@@ -77,41 +112,64 @@
   }, { threshold: 0.5 });
   skillBars.forEach(bar => skillObserver.observe(bar));
 
-  const modal = document.getElementById('modal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalBtn = document.getElementById('modalBtn');
-  let currentLink = '';
+  let pendingLink = null;
+  let pendingType = null;
+  const confirmModal = document.getElementById('confirmModal');
+  const confirmModalText = document.getElementById('confirmModalText');
+  const confirmOkBtn = document.getElementById('confirmOkBtn');
+  const confirmCancelBtn = document.getElementById('confirmCancelBtn');
+  const confirmCloseBtn = document.getElementById('confirmCloseBtn');
 
-  const links = {
-    instagram: { title: '📸 Instagram Steven Samuel', url: 'https://www.instagram.com/stvnn_saa?igsh=MTBxcngzOHU5cTIycg==' },
-    tiktok: { title: '🎵 TikTok Steven Samuel', url: 'https://www.tiktok.com/@stvnn_saa?_r=1&_t=ZS-95PORgi1v89' },
-    drive: { title: '💾 Google Drive Dokumentasi', url: 'https://drive.google.com/drive/folders/1DAQ0gYOpDKs4XM1JHrKLWf4Y5UJ3PSS3?usp=drive_link' },
-    donate: { title: '💰 Dukung Karya Saya', url: 'https://sociabuzz.com/stvnn_saaa/tribe' }
+  const socialLinks = {
+    instagram: { title: 'Instagram', url: 'https://www.instagram.com/stvnn_saa?igsh=MTBxcngzOHU5cTIycg==' },
+    tiktok: { title: 'TikTok', url: 'https://www.tiktok.com/@stvnn_saa?_r=1&_t=ZS-95PORgi1v89' },
+    drive: { title: 'Google Drive', url: 'https://drive.google.com/drive/folders/1DAQ0gYOpDKs4XM1JHrKLWf4Y5UJ3PSS3?usp=drive_link' },
+    donate: { title: 'Sociabuzz', url: 'https://sociabuzz.com/stvnn_saaa/tribe' },
+    visekaicity: { title: 'VisekaiCity', url: 'https://stevensaa-re.github.io/VisekaiCity-OFC/' },
+    michieworld: { title: 'MichieWorld', url: 'https://stevensaa-re.github.io/MichieWorld/' },
+    uniweeb: { title: 'UNIWEEB', url: 'https://uniweeb.vercel.app/' },
+    swiftos: { title: 'SwiftOS', url: 'https://stevensaa-re.github.io/SwiftOS/' },
+    aikabot: { title: 'AikaBot', url: 'https://wa.me/6285117573210' }
   };
 
-  window.openModal = function(type) {
-    if (links[type]) {
-      modalTitle.textContent = links[type].title;
-      currentLink = links[type].url;
-      modal.classList.add('active');
+  function closeConfirmModal() {
+    confirmModal?.classList.remove('active');
+    pendingLink = null;
+    pendingType = null;
+    document.body.style.overflow = '';
+  }
+
+  function openConfirmModal(type) {
+    const link = socialLinks[type];
+    if (link) {
+      pendingLink = link.url;
+      pendingType = type;
+      confirmModalText.textContent = `Apakah Anda ingin membuka ${link.title}?`;
+      confirmModal?.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
-  };
+  }
 
-  window.closeModal = function() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  };
-
-  modalBtn?.addEventListener('click', () => {
-    if (currentLink) {
-      window.open(currentLink, '_blank');
-      closeModal();
+  confirmOkBtn?.addEventListener('click', () => {
+    if (pendingLink) {
+      window.open(pendingLink, '_blank');
+      closeConfirmModal();
     }
   });
 
-  modal?.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
+  confirmCancelBtn?.addEventListener('click', closeConfirmModal);
+  confirmCloseBtn?.addEventListener('click', closeConfirmModal);
+  confirmModal?.addEventListener('click', (e) => {
+    if (e.target === confirmModal) closeConfirmModal();
+  });
+
+  window.openConfirmModal = openConfirmModal;
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (confirmModal?.classList.contains('active')) closeConfirmModal();
+      if (galleryModal?.classList.contains('active')) closeGalleryModal();
+    }
   });
 
   const galleryData = [
@@ -129,9 +187,9 @@
     { title: 'Setup Laptop', image: 'foto 9.jpeg', description: 'Setup workspace saya. Monitor Acer SA243Y + Laptop Asus M415DAO (Ryzen 3 3250U, 12GB RAM, 512GB SSD).' }
   ];
 
-  const galleryGrid = document.getElementById('galleryGrid');
+  const galleryScroll = document.getElementById('galleryScroll');
   
-  if (galleryGrid) {
+  if (galleryScroll) {
     galleryData.forEach((item, index) => {
       const card = document.createElement('div');
       card.className = 'gallery-item-card';
@@ -140,9 +198,32 @@
         <div class="gallery-item-title">${item.title}</div>
       `;
       card.addEventListener('click', () => openGalleryModal(index));
-      galleryGrid.appendChild(card);
+      galleryScroll.appendChild(card);
     });
   }
+
+  const galleryScrollLeft = document.getElementById('galleryScrollLeft');
+  const galleryScrollRight = document.getElementById('galleryScrollRight');
+
+  galleryScrollLeft?.addEventListener('click', () => {
+    galleryScroll.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+  galleryScrollRight?.addEventListener('click', () => {
+    galleryScroll.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+
+  const partnersScroll = document.getElementById('partnersScroll');
+  const partnersScrollLeft = document.getElementById('partnersScrollLeft');
+  const partnersScrollRight = document.getElementById('partnersScrollRight');
+
+  partnersScrollLeft?.addEventListener('click', () => {
+    partnersScroll.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  partnersScrollRight?.addEventListener('click', () => {
+    partnersScroll.scrollBy({ left: 300, behavior: 'smooth' });
+  });
 
   const galleryModal = document.getElementById('galleryModal');
   const galleryModalImage = document.getElementById('galleryModalImage');
@@ -173,13 +254,6 @@
     if (e.target === galleryModal) closeGalleryModal();
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      if (modal?.classList.contains('active')) closeModal();
-      if (galleryModal?.classList.contains('active')) closeGalleryModal();
-    }
-  });
-
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -187,5 +261,10 @@
     } else {
       navbar?.classList.remove('scrolled');
     }
+  });
+
+  const heroScroll = document.querySelector('.hero-scroll');
+  heroScroll?.addEventListener('click', () => {
+    document.getElementById('biodata')?.scrollIntoView({ behavior: 'smooth' });
   });
 })();
