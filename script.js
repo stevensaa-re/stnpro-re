@@ -101,6 +101,17 @@
     partnerObserver.observe(el);
   });
 
+  const skillBars = document.querySelectorAll('.skill-progress');
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const width = entry.target.style.width;
+        entry.target.style.width = width;
+      }
+    });
+  }, { threshold: 0.5 });
+  skillBars.forEach(bar => skillObserver.observe(bar));
+
   let pendingLink = null;
   const confirmModal = document.getElementById('confirmModal');
   const confirmModalText = document.getElementById('confirmModalText');
@@ -202,29 +213,6 @@
   const partnersScroll = document.getElementById('partnersScroll');
   const partnersScrollLeft = document.getElementById('partnersScrollLeft');
   const partnersScrollRight = document.getElementById('partnersScrollRight');
-
-  if (partnersScroll) {
-    const partnerData = [
-      { title: 'VisekaiCity', desc: 'Komunitas Minecraft yang hangat dan seru', icon: 'fas fa-gamepad', type: 'visekaicity' },
-      { title: 'MichieWorld', desc: 'Komunitas penggemar Michelle Alexandra', icon: 'fas fa-heart', type: 'michieworld' },
-      { title: 'UNIWEEB', desc: 'Komunitas jejepangan Bandung', icon: 'fas fa-globe', type: 'uniweeb' },
-      { title: 'SwiftOS', desc: 'Sistem operasi simulator berbasis web', icon: 'fas fa-bolt', type: 'swiftos' },
-      { title: 'AikaBot', desc: 'WhatsApp Bot multifungsi', icon: 'fab fa-whatsapp', type: 'aikabot' }
-    ];
-
-    partnerData.forEach(partner => {
-      const card = document.createElement('div');
-      card.className = 'partner-card animate-on-scroll';
-      card.setAttribute('onclick', `openConfirmModal('${partner.type}')`);
-      card.innerHTML = `
-        <div class="partner-icon"><i class="${partner.icon}"></i></div>
-        <h3>${partner.title}</h3>
-        <p>${partner.desc}</p>
-        <span class="partner-link">Kunjungi →</span>
-      `;
-      partnersScroll.appendChild(card);
-    });
-  }
 
   partnersScrollLeft?.addEventListener('click', () => {
     partnersScroll.scrollBy({ left: -300, behavior: 'smooth' });
