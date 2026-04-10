@@ -104,11 +104,11 @@
           </h1>
           <p class="hero-desc">Membangun ekosistem digital dan audio profesional. Dari kode hingga gelombang suara, saya hadir untuk menciptakan pengalaman yang tak terlupakan.</p>
           <div class="hero-buttons">
-            <button class="btn-primary" onclick="openModal('donate')">
+            <button class="btn-primary" onclick="openConfirmModal('donate')">
               <i class="fas fa-heart"></i>
               <span>Dukung Saya</span>
             </button>
-            <button class="btn-outline" onclick="openModal('drive')">
+            <button class="btn-outline" onclick="openConfirmModal('drive')">
               <i class="fas fa-folder-open"></i>
               <span>Google Drive</span>
             </button>
@@ -150,7 +150,7 @@
           <div class="section-divider"></div>
         </div>
         <div class="biodata-grid">
-          <div class="biodata-card">
+          <div class="biodata-card animate-on-scroll">
             <div class="biodata-avatar-section">
               <div class="biodata-avatar-wrapper">
                 <img src="fotoOwner.jpeg" alt="Steven Samuel Setiawan" class="biodata-avatar-img">
@@ -158,8 +158,8 @@
               <h3 class="biodata-fullname">Steven Samuel Setiawan</h3>
               <p class="biodata-role">Founder & Lead Developer</p>
               <div class="social-links">
-                <button class="social-icon" onclick="openModal('instagram')"><i class="fab fa-instagram"></i></button>
-                <button class="social-icon" onclick="openModal('tiktok')"><i class="fab fa-tiktok"></i></button>
+                <button class="social-icon" onclick="openConfirmModal('instagram')"><i class="fab fa-instagram"></i></button>
+                <button class="social-icon" onclick="openConfirmModal('tiktok')"><i class="fab fa-tiktok"></i></button>
                 <button class="social-icon" onclick="window.open('https://github.com/stevensaa-re', '_blank')"><i class="fab fa-github"></i></button>
               </div>
             </div>
@@ -201,7 +201,7 @@
               </div>
             </div>
           </div>
-          <div class="skills-card">
+          <div class="skills-card animate-on-scroll">
             <h3 class="skills-title">Keahlian & Teknologi</h3>
             <div class="skills-grid">
               <div class="skill-item" data-skill="95">
@@ -263,32 +263,32 @@
           <div class="section-divider"></div>
         </div>
         <div class="services-grid">
-          <div class="service-card">
+          <div class="service-card animate-on-scroll">
             <div class="service-icon"><i class="fas fa-code"></i></div>
             <h3>Web Development</h3>
             <p>Membangun website modern, responsif, dan performa tinggi sesuai kebutuhan bisnis Anda.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card animate-on-scroll">
             <div class="service-icon"><i class="fas fa-headphones-alt"></i></div>
             <h3>Sound Engineering</h3>
             <p>Penanganan sound system profesional untuk event, mixing, dan audio setup.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card animate-on-scroll">
             <div class="service-icon"><i class="fas fa-camera"></i></div>
             <h3>Fotografi & Videografi</h3>
             <p>Dokumentasi event, produk, dan portrait dengan hasil berkualitas tinggi.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card animate-on-scroll">
             <div class="service-icon"><i class="fas fa-microchip"></i></div>
             <h3>Electronics DIY</h3>
             <p>Proyek elektronika custom, troubleshooting, dan modifikasi hardware.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card animate-on-scroll">
             <div class="service-icon"><i class="fas fa-computer"></i></div>
             <h3>PC Building</h3>
             <p>Konsultasi dan perakitan PC gaming, workstation, atau server sesuai kebutuhan.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card animate-on-scroll">
             <div class="service-icon"><i class="fas fa-wrench"></i></div>
             <h3>Service & Maintenance</h3>
             <p>Servis komputer, laptop, dan perangkat elektronik lainnya.</p>
@@ -304,7 +304,11 @@
           <h2 class="section-title">Karya & Dokumentasi</h2>
           <div class="section-divider"></div>
         </div>
-        <div class="gallery-grid" id="galleryGrid"></div>
+        <div class="gallery-scroll-container">
+          <div class="gallery-scroll" id="galleryScroll"></div>
+          <button class="scroll-btn scroll-left" id="galleryScrollLeft"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-btn scroll-right" id="galleryScrollRight"><i class="fas fa-chevron-right"></i></button>
+        </div>
       </div>
     </section>
 
@@ -315,37 +319,41 @@
           <h2 class="section-title">Partner & Komunitas</h2>
           <div class="section-divider"></div>
         </div>
-        <div class="partners-grid">
-          <div class="partner-card" onclick="window.open('https://stevensaa-re.github.io/VisekaiCity-OFC/','_blank')">
-            <div class="partner-icon"><i class="fas fa-gamepad"></i></div>
-            <h3>VisekaiCity</h3>
-            <p>Komunitas Minecraft yang hangat dan seru</p>
-            <span class="partner-link">Kunjungi →</span>
+        <div class="partners-scroll-container">
+          <div class="partners-scroll" id="partnersScroll">
+            <div class="partner-card animate-on-scroll" onclick="openConfirmModal('visekaicity')">
+              <div class="partner-icon"><i class="fas fa-gamepad"></i></div>
+              <h3>VisekaiCity</h3>
+              <p>Komunitas Minecraft yang hangat dan seru</p>
+              <span class="partner-link">Kunjungi →</span>
+            </div>
+            <div class="partner-card animate-on-scroll" onclick="openConfirmModal('michieworld')">
+              <div class="partner-icon"><i class="fas fa-heart"></i></div>
+              <h3>MichieWorld</h3>
+              <p>Komunitas penggemar Michelle Alexandra</p>
+              <span class="partner-link">Kunjungi →</span>
+            </div>
+            <div class="partner-card animate-on-scroll" onclick="openConfirmModal('uniweeb')">
+              <div class="partner-icon"><i class="fas fa-globe"></i></div>
+              <h3>UNIWEEB</h3>
+              <p>Komunitas jejepangan Bandung</p>
+              <span class="partner-link">Kunjungi →</span>
+            </div>
+            <div class="partner-card animate-on-scroll" onclick="openConfirmModal('swiftos')">
+              <div class="partner-icon"><i class="fas fa-bolt"></i></div>
+              <h3>SwiftOS</h3>
+              <p>Sistem operasi simulator berbasis web</p>
+              <span class="partner-link">Kunjungi →</span>
+            </div>
+            <div class="partner-card animate-on-scroll" onclick="openConfirmModal('aikabot')">
+              <div class="partner-icon"><i class="fab fa-whatsapp"></i></div>
+              <h3>AikaBot</h3>
+              <p>WhatsApp Bot multifungsi</p>
+              <span class="partner-link">Hubungi →</span>
+            </div>
           </div>
-          <div class="partner-card" onclick="window.open('https://stevensaa-re.github.io/MichieWorld/','_blank')">
-            <div class="partner-icon"><i class="fas fa-heart"></i></div>
-            <h3>MichieWorld</h3>
-            <p>Komunitas penggemar Michelle Alexandra</p>
-            <span class="partner-link">Kunjungi →</span>
-          </div>
-          <div class="partner-card" onclick="window.open('https://uniweeb.vercel.app/','_blank')">
-            <div class="partner-icon"><i class="fas fa-globe"></i></div>
-            <h3>UNIWEEB</h3>
-            <p>Komunitas jejepangan Bandung</p>
-            <span class="partner-link">Kunjungi →</span>
-          </div>
-          <div class="partner-card" onclick="window.open('https://stevensaa-re.github.io/SwiftOS/','_blank')">
-            <div class="partner-icon"><i class="fas fa-bolt"></i></div>
-            <h3>SwiftOS</h3>
-            <p>Sistem operasi simulator berbasis web</p>
-            <span class="partner-link">Kunjungi →</span>
-          </div>
-          <div class="partner-card" onclick="window.open('https://wa.me/6285117573210','_blank')">
-            <div class="partner-icon"><i class="fab fa-whatsapp"></i></div>
-            <h3>AikaBot</h3>
-            <p>WhatsApp Bot multifungsi</p>
-            <span class="partner-link">Hubungi →</span>
-          </div>
+          <button class="scroll-btn partners-scroll-left" id="partnersScrollLeft"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-btn partners-scroll-right" id="partnersScrollRight"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
@@ -359,20 +367,26 @@
       </div>
       <p class="footer-text">Sound Engineer • Server Engineer • WebDev</p>
       <div class="footer-social">
-        <button class="footer-social-icon" onclick="openModal('instagram')"><i class="fab fa-instagram"></i></button>
-        <button class="footer-social-icon" onclick="openModal('tiktok')"><i class="fab fa-tiktok"></i></button>
-        <button class="footer-social-icon" onclick="openModal('drive')"><i class="fab fa-google-drive"></i></button>
+        <button class="footer-social-icon" onclick="openConfirmModal('instagram')"><i class="fab fa-instagram"></i></button>
+        <button class="footer-social-icon" onclick="openConfirmModal('tiktok')"><i class="fab fa-tiktok"></i></button>
+        <button class="footer-social-icon" onclick="openConfirmModal('drive')"><i class="fab fa-google-drive"></i></button>
       </div>
       <p class="footer-copyright">© 2025 STN PROJECT REBORN – Created by Steven Samuel</p>
     </div>
   </footer>
 
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
-      <div class="modal-icon"><i class="fas fa-external-link-alt"></i></div>
-      <h2 class="modal-title" id="modalTitle"></h2>
-      <button class="modal-btn" id="modalBtn">Kunjungi Sekarang <i class="fas fa-arrow-right"></i></button>
+  <div class="confirm-modal" id="confirmModal">
+    <div class="confirm-modal-content">
+      <div class="confirm-modal-icon">
+        <i class="fas fa-question-circle"></i>
+      </div>
+      <h3 class="confirm-modal-title">Konfirmasi</h3>
+      <p class="confirm-modal-text" id="confirmModalText">Apakah Anda ingin melanjutkan?</p>
+      <div class="confirm-modal-buttons">
+        <button class="confirm-btn cancel" id="confirmCancelBtn">Batal</button>
+        <button class="confirm-btn ok" id="confirmOkBtn">Ya, Lanjutkan</button>
+      </div>
+      <button class="confirm-modal-close" id="confirmCloseBtn"><i class="fas fa-times"></i></button>
     </div>
   </div>
 
