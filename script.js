@@ -113,7 +113,6 @@
   skillBars.forEach(bar => skillObserver.observe(bar));
 
   let pendingLink = null;
-  let pendingType = null;
   const confirmModal = document.getElementById('confirmModal');
   const confirmModalText = document.getElementById('confirmModalText');
   const confirmOkBtn = document.getElementById('confirmOkBtn');
@@ -135,7 +134,6 @@
   function closeConfirmModal() {
     confirmModal?.classList.remove('active');
     pendingLink = null;
-    pendingType = null;
     document.body.style.overflow = '';
   }
 
@@ -143,7 +141,6 @@
     const link = socialLinks[type];
     if (link) {
       pendingLink = link.url;
-      pendingType = type;
       confirmModalText.textContent = `Apakah Anda ingin membuka ${link.title}?`;
       confirmModal?.classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -174,17 +171,17 @@
 
   const galleryData = [
     { title: 'PC Server (Lama)', image: 'foto 1.jpg', description: 'PC server pertama yang saya gunakan. Spek low end namun cukup untuk kebutuhan belajar dan eksperimen.' },
-    { title: 'Laptop Rusak → All-In-One PC', image: 'foto 10.jpeg', description: 'Mengubah laptop rusak menjadi PC All-In-One. Lumayan untuk monitoring server wkwkwk :v' },
-    { title: 'PC Server Sekarang', image: 'foto 11.jpeg', description: 'PC server saat ini: Intel Core i7-2600, RAM 8GB DDR3, SSD 120GB (Ubuntu Server), HDD 160GB + 1TB. Untuk eksperimen, server Minecraft, dan AikaBot.' },
+    { title: 'Laptop Rusak → All-In-One PC', image: 'foto 10.jpeg', description: 'Mengubah laptop rusak menjadi PC All-In-One. Lumayan untuk monitoring server.' },
+    { title: 'PC Server Sekarang', image: 'foto 11.jpeg', description: 'PC server saat ini: Intel Core i7-2600, RAM 8GB DDR3, SSD 120GB (Ubuntu Server), HDD 160GB + 1TB.' },
     { title: 'Kameramen Livestream Gereja', image: 'foto 12.jpeg', description: 'Pelayanan di gereja sebagai kameramen untuk livestream ibadah.' },
-    { title: 'PC Custom di Laci Meja', image: 'foto 2.jpg', description: 'Proyek iseng merakit PC di dalam laci meja. Hasilnya suhu lumayan tinggi tapi fun! :v' },
+    { title: 'PC Custom di Laci Meja', image: 'foto 2.jpg', description: 'Proyek iseng merakit PC di dalam laci meja. Hasilnya suhu lumayan tinggi tapi fun!' },
     { title: 'Glances Monitoring', image: 'foto 3.jpg', description: 'Sistem monitoring untuk PC server yang bisa diakses dari mana saja.' },
     { title: 'Mixing di Event', image: 'foto 4.jpg', description: 'Momen ketika saya bertugas sebagai sound engineer mixing untuk sebuah acara.' },
-    { title: 'VU Meter Digital (Arduino)', image: 'foto 5.jpg', description: 'Proyek IoT VU Meter digital menggunakan Arduino. Terintegrasi dengan sound system, hasilnya memuaskan! :D' },
+    { title: 'VU Meter Digital (Arduino)', image: 'foto 5.jpg', description: 'Proyek IoT VU Meter digital menggunakan Arduino. Terintegrasi dengan sound system.' },
     { title: 'Arduino Jadi Gantungan Kunci', image: 'foto 6.jpg', description: 'Arduino yang sudah tidak bisa diupload program lagi saya sulap menjadi gantungan kunci unik.' },
-    { title: 'Proyek Jam Digital', image: 'foto 7.jpg', description: 'Jam digital berbasis NTP menggunakan modul TM1637 dan Wemos D1 Mini. Akurasi waktu via internet.' },
+    { title: 'Proyek Jam Digital', image: 'foto 7.jpg', description: 'Jam digital berbasis NTP menggunakan modul TM1637 dan Wemos D1 Mini.' },
     { title: 'Truenas Server', image: 'foto 8.jpg', description: 'Sistem operasi TrueNAS Scale yang saya gunakan di server lama untuk manajemen storage.' },
-    { title: 'Setup Laptop', image: 'foto 9.jpeg', description: 'Setup workspace saya. Monitor Acer SA243Y + Laptop Asus M415DAO (Ryzen 3 3250U, 12GB RAM, 512GB SSD).' }
+    { title: 'Setup Laptop', image: 'foto 9.jpeg', description: 'Setup workspace saya. Monitor Acer SA243Y + Laptop Asus M415DAO.' }
   ];
 
   const galleryScroll = document.getElementById('galleryScroll');
