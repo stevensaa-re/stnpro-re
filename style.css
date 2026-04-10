@@ -34,14 +34,10 @@ body {
   left: 0;
   right: 0;
   padding: 18px 0;
-  background: rgba(10, 10, 26, 0.75);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-top: 3px solid rgba(10, 10, 26, 0.95);
+  background: transparent;
   border-bottom: 1px solid rgba(96, 165, 250, 0.15);
   z-index: 1000;
   transition: all 0.3s ease;
-  overflow: hidden;
 }
 
 .nav-container {
@@ -1503,9 +1499,7 @@ body.light-mode .floating-card {
 
 .navbar.scrolled {
   padding: 12px 0;
-  background: rgba(10, 10, 26, 0.85);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+  background: transparent;
 }
 
 body.light-mode .navbar.scrolled {
