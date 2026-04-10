@@ -10,16 +10,19 @@
   <meta name="keywords" content="STN Project Reborn, Steven Samuel Setiawan, Web Developer Bandung, Sound Engineer, PC Enthusiast, Server Engineer, Streamer">
   <meta name="author" content="Steven Samuel Setiawan">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="STN PROJECT REBORN | Steven Samuel Setiawan">
+
+  <meta property="og:title" content="STN PROJECT REBORN | Steven Samuel Setiawan - Web Developer & Sound Engineer">
   <meta property="og:description" content="Platform berbagi passion: sound system, fotografi, elektronika, web development, dan PC building. Berbasis di Bandung, Indonesia.">
   <meta property="og:image" content="https://stevensaa-re.github.io/stvnproject/STN_PROJECT.png">
   <meta property="og:url" content="https://stevensaa-re.github.io/stvnproject/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="id_ID">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="STN PROJECT REBORN | Steven Samuel Setiawan">
   <meta name="twitter:description" content="Platform berbagi passion: sound system, fotografi, elektronika, web development, dan PC building.">
   <meta name="twitter:image" content="https://stevensaa-re.github.io/stvnproject/STN_PROJECT.png">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,14 +45,14 @@
     ]
   }
   </script>
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <div class="cursor-glow"></div>
-  <div class="noise-overlay"></div>
-
+  
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-brand">
@@ -60,28 +63,21 @@
         <div class="nav-text">
           <span class="brand-name">STN PROJECT</span>
           <span class="brand-tag">REBORN</span>
-          <span class="brand-role">Sound · Server · WebDev · Electronics</span>
+          <span class="brand-role">Sound Engineer • Server Engineer • WebDev</span>
         </div>
       </div>
-      <div class="nav-links">
-        <a href="#home" class="nav-link">Beranda</a>
-        <a href="#about" class="nav-link">Tentang</a>
-        <a href="#services" class="nav-link">Layanan</a>
-        <a href="#gallery" class="nav-link">Galeri</a>
-        <a href="#partners" class="nav-link">Kolaborasi</a>
-      </div>
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+        <button class="theme-toggle" id="themeToggle">
           <i class="fas fa-moon"></i>
         </button>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <button class="menu-toggle" id="menuToggle">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#home" class="mobile-link">Beranda</a>
-      <a href="#about" class="mobile-link">Tentang</a>
+      <a href="#biodata" class="mobile-link">Tentang</a>
       <a href="#services" class="mobile-link">Layanan</a>
       <a href="#gallery" class="mobile-link">Galeri</a>
       <a href="#partners" class="mobile-link">Kolaborasi</a>
@@ -90,37 +86,22 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-grid-bg"></div>
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
       <div class="hero-container">
         <div class="hero-left">
           <div class="hero-badge">
             <span class="badge-dot"></span>
-            <span class="badge-mono">SOUND ENGINEER &amp; WEB DEVELOPER — BANDUNG</span>
+            SOUND ENGINEER & WEB DEVELOPER
           </div>
           <h1 class="hero-title">
-            <span class="title-top">Steven</span>
-            <span class="title-mid">Samuel</span>
-            <span class="title-bot accent-word">Setiawan</span>
+            <span class="title-line">Steven Samuel</span>
+            <span class="title-line gradient-text">Setiawan</span>
           </h1>
-          <p class="hero-desc">
-            Dari gelombang suara yang menggetarkan panggung, hingga baris kode yang menghidupkan layar — saya membangun pengalaman yang terasa nyata.
-          </p>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-num">5+</span>
-              <span class="stat-label">Bidang Keahlian</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-num">12+</span>
-              <span class="stat-label">Proyek Selesai</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-num">3+</span>
-              <span class="stat-label">Tahun Pengalaman</span>
-            </div>
-          </div>
+          <p class="hero-desc">Membangun ekosistem digital dan audio profesional. Dari kode hingga gelombang suara, saya hadir untuk menciptakan pengalaman yang tak terlupakan.</p>
           <div class="hero-buttons">
             <button class="btn-primary" onclick="openConfirmModal('donate')">
               <i class="fas fa-heart"></i>
@@ -128,132 +109,57 @@
             </button>
             <button class="btn-outline" onclick="openConfirmModal('drive')">
               <i class="fas fa-folder-open"></i>
-              <span>Lihat Portofolio</span>
+              <span>Google Drive</span>
             </button>
           </div>
         </div>
         <div class="hero-right">
           <div class="hero-avatar-container">
-            <div class="avatar-frame">
-              <div class="avatar-corner c1"></div>
-              <div class="avatar-corner c2"></div>
-              <div class="avatar-corner c3"></div>
-              <div class="avatar-corner c4"></div>
-              <div class="avatar-wrapper">
-                <img src="STN_PROJECT.png" alt="Steven Samuel Setiawan" class="hero-avatar-img">
-              </div>
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring-2"></div>
+            <div class="avatar-wrapper">
+              <img src="STN_PROJECT.png" alt="Steven Samuel Setiawan" class="hero-avatar-img">
             </div>
-            <div class="floating-chip chip-1">
+            <div class="floating-card card-1">
               <i class="fas fa-code"></i>
               <span>Web Dev</span>
             </div>
-            <div class="floating-chip chip-2">
+            <div class="floating-card card-2">
               <i class="fas fa-headphones"></i>
               <span>Sound Eng</span>
             </div>
-            <div class="floating-chip chip-3">
+            <div class="floating-card card-3">
               <i class="fas fa-server"></i>
               <span>Server</span>
-            </div>
-            <div class="floating-chip chip-4">
-              <i class="fas fa-microchip"></i>
-              <span>Electronics</span>
             </div>
           </div>
         </div>
       </div>
-      <a href="#about" class="hero-scroll" aria-label="Scroll ke bawah">
-        <span class="scroll-label">Scroll</span>
-        <div class="scroll-line"></div>
-      </a>
-    </section>
-
-    <section class="section section-about-reborn" id="about">
-      <div class="container">
-        <div class="reborn-wrapper animate-on-scroll">
-          <div class="reborn-label">
-            <span class="mono-tag">// TENTANG PLATFORM</span>
-          </div>
-          <div class="reborn-grid">
-            <div class="reborn-left">
-              <h2 class="reborn-title">
-                <span>STN PROJECT</span>
-                <span class="accent-stroke">REBORN</span>
-              </h2>
-              <div class="reborn-divider"></div>
-              <p class="reborn-desc">
-                Sebuah platform yang lahir dari <strong>passion murni</strong> — bukan sekadar hobi biasa. STN PROJECT REBORN adalah ruang di mana kreativitas bertemu teknik, di mana setiap proyek punya jiwa dan cerita tersendiri.
-              </p>
-              <p class="reborn-desc">
-                Dari menangani <strong>sound system</strong> untuk event yang menggetarkan, <strong>fotografi profesional</strong> yang mengabadikan momen terbaik, <strong>proyek elektronika</strong> custom yang inovatif, <strong>web development</strong> yang fungsional dan estetik, hingga <strong>konsultasi rakitan komputer</strong> yang tepat sasaran.
-              </p>
-              <p class="reborn-desc">
-                Semua bidang, satu semangat — menciptakan sesuatu yang <em>benar-benar bermakna</em>.
-              </p>
-            </div>
-            <div class="reborn-right">
-              <div class="reborn-pillars">
-                <div class="pillar-item">
-                  <div class="pillar-icon"><i class="fas fa-volume-up"></i></div>
-                  <div class="pillar-text">
-                    <strong>Sound System</strong>
-                    <span>Event &amp; Live Performance</span>
-                  </div>
-                </div>
-                <div class="pillar-item">
-                  <div class="pillar-icon"><i class="fas fa-camera-retro"></i></div>
-                  <div class="pillar-text">
-                    <strong>Fotografi Profesional</strong>
-                    <span>Dokumentasi Berkualitas Tinggi</span>
-                  </div>
-                </div>
-                <div class="pillar-item">
-                  <div class="pillar-icon"><i class="fas fa-microchip"></i></div>
-                  <div class="pillar-text">
-                    <strong>Elektronika Custom</strong>
-                    <span>DIY &amp; Inovasi Hardware</span>
-                  </div>
-                </div>
-                <div class="pillar-item">
-                  <div class="pillar-icon"><i class="fas fa-code"></i></div>
-                  <div class="pillar-text">
-                    <strong>Web Development</strong>
-                    <span>Modern &amp; Responsif</span>
-                  </div>
-                </div>
-                <div class="pillar-item">
-                  <div class="pillar-icon"><i class="fas fa-desktop"></i></div>
-                  <div class="pillar-text">
-                    <strong>Konsultasi PC</strong>
-                    <span>Rakitan Tepat &amp; Efisien</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
       </div>
     </section>
 
     <section class="section" id="biodata">
       <div class="container">
-        <div class="section-header animate-on-scroll">
-          <span class="mono-tag">// TENTANG SAYA</span>
+        <div class="section-header">
+          <span class="section-tag">TENTANG SAYA</span>
           <h2 class="section-title">Kenali Lebih Dekat</h2>
+          <div class="section-divider"></div>
         </div>
         <div class="biodata-grid">
           <div class="biodata-card animate-on-scroll">
             <div class="biodata-avatar-section">
               <div class="biodata-avatar-wrapper">
                 <img src="fotoOwner.jpeg" alt="Steven Samuel Setiawan" class="biodata-avatar-img">
-                <div class="avatar-accent"></div>
               </div>
               <h3 class="biodata-fullname">Steven Samuel Setiawan</h3>
-              <p class="biodata-role">Founder &amp; Lead Developer</p>
+              <p class="biodata-role">Founder & Lead Developer</p>
               <div class="social-links">
-                <button class="social-icon" onclick="openConfirmModal('instagram')" aria-label="Instagram"><i class="fab fa-instagram"></i></button>
-                <button class="social-icon" onclick="openConfirmModal('tiktok')" aria-label="TikTok"><i class="fab fa-tiktok"></i></button>
-                <button class="social-icon" onclick="window.open('https://github.com/stevensaa-re', '_blank')" aria-label="GitHub"><i class="fab fa-github"></i></button>
+                <button class="social-icon" onclick="openConfirmModal('instagram')"><i class="fab fa-instagram"></i></button>
+                <button class="social-icon" onclick="openConfirmModal('tiktok')"><i class="fab fa-tiktok"></i></button>
+                <button class="social-icon" onclick="window.open('https://github.com/stevensaa-re', '_blank')"><i class="fab fa-github"></i></button>
               </div>
             </div>
             <div class="biodata-info-section">
@@ -267,69 +173,68 @@
               <div class="info-item">
                 <div class="info-icon"><i class="fas fa-briefcase"></i></div>
                 <div class="info-content">
-                  <span class="info-label">Status</span>
-                  <span class="info-value status-open"><span class="status-dot"></span> Tersedia untuk Kolaborasi</span>
+                  <span class="info-label">Profesi</span>
+                  <span class="info-value">Web Developer · Server Engineer · Sound Engineer</span>
                 </div>
               </div>
               <div class="info-item">
-                <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="info-icon"><i class="fas fa-laptop-code"></i></div>
                 <div class="info-content">
-                  <span class="info-label">Bidang</span>
-                  <span class="info-value">Teknologi Informasi &amp; Audio Engineering</span>
+                  <span class="info-label">Daily Driver</span>
+                  <span class="info-value">Asus M415DAO — Ryzen 3 3250U, 12GB RAM, 512GB SSD</span>
                 </div>
               </div>
               <div class="info-item">
-                <div class="info-icon"><i class="fas fa-language"></i></div>
+                <div class="info-icon"><i class="fas fa-server"></i></div>
                 <div class="info-content">
-                  <span class="info-label">Bahasa</span>
-                  <span class="info-value">Indonesia, Inggris (Dasar)</span>
+                  <span class="info-label">PC Server</span>
+                  <span class="info-value">Intel Core i7-2600, 8GB DDR3, SSD 120GB + HDD 1.16TB</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="fas fa-heart"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Passion</span>
+                  <span class="info-value">Sound Engineering · Electronics DIY · PC Building · WebDev · Streaming</span>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="skills-card animate-on-scroll">
-            <h3 class="skills-title">Skill &amp; Kompetensi</h3>
-            <div class="skills-list">
-              <div class="skill-item">
+            <h3 class="skills-title">Keahlian & Teknologi</h3>
+            <div class="skills-grid">
+              <div class="skill-item" data-skill="95">
                 <div class="skill-info">
                   <span>Web Development</span>
-                  <span class="skill-pct">88%</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+              </div>
+              <div class="skill-item" data-skill="88">
+                <div class="skill-info">
+                  <span>Sound Engineering</span>
+                  <span>88%</span>
                 </div>
                 <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
               </div>
-              <div class="skill-item">
+              <div class="skill-item" data-skill="85">
                 <div class="skill-info">
-                  <span>Sound Engineering</span>
-                  <span class="skill-pct">85%</span>
+                  <span>Server Management</span>
+                  <span>85%</span>
                 </div>
                 <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
               </div>
-              <div class="skill-item">
+              <div class="skill-item" data-skill="82">
                 <div class="skill-info">
-                  <span>Server &amp; Linux Admin</span>
-                  <span class="skill-pct">82%</span>
+                  <span>PC Building</span>
+                  <span>82%</span>
                 </div>
                 <div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div>
               </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>PC Building &amp; Konsultasi</span>
-                  <span class="skill-pct">90%</span>
-                </div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Fotografi &amp; Videografi</span>
-                  <span class="skill-pct">80%</span>
-                </div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-              </div>
-              <div class="skill-item">
+              <div class="skill-item" data-skill="78">
                 <div class="skill-info">
                   <span>Electronics DIY</span>
-                  <span class="skill-pct">78%</span>
+                  <span>78%</span>
                 </div>
                 <div class="skill-bar"><div class="skill-progress" style="width: 78%"></div></div>
               </div>
@@ -349,66 +254,43 @@
       </div>
     </section>
 
-    <section class="section section-dark" id="services">
+    <section class="section" id="services">
       <div class="container">
-        <div class="section-header animate-on-scroll">
-          <span class="mono-tag">// LAYANAN</span>
-          <h2 class="section-title">Yang Bisa Saya Kerjakan</h2>
+        <div class="section-header">
+          <span class="section-tag">LAYANAN</span>
+          <h2 class="section-title">Apa yang Saya Tawarkan</h2>
+          <div class="section-divider"></div>
         </div>
         <div class="services-grid">
           <div class="service-card animate-on-scroll">
-            <div class="service-num">01</div>
             <div class="service-icon"><i class="fas fa-code"></i></div>
             <h3>Web Development</h3>
-            <p>Website modern, responsif, dan cepat. Dari landing page elegan hingga aplikasi web yang kompleks — dibangun dengan standar produksi terbaik.</p>
-            <div class="service-tags">
-              <span>HTML/CSS</span><span>JavaScript</span><span>React</span>
-            </div>
+            <p>Membangun website modern, responsif, dan performa tinggi sesuai kebutuhan bisnis Anda.</p>
           </div>
           <div class="service-card animate-on-scroll">
-            <div class="service-num">02</div>
             <div class="service-icon"><i class="fas fa-headphones-alt"></i></div>
             <h3>Sound Engineering</h3>
-            <p>Penanganan sound system profesional untuk berbagai skala event. Mixing live yang presisi, setup audio yang bersih dan bertenaga.</p>
-            <div class="service-tags">
-              <span>Live Mixing</span><span>PA System</span><span>Event Audio</span>
-            </div>
+            <p>Penanganan sound system profesional untuk event, mixing, dan audio setup.</p>
           </div>
           <div class="service-card animate-on-scroll">
-            <div class="service-num">03</div>
             <div class="service-icon"><i class="fas fa-camera"></i></div>
-            <h3>Fotografi &amp; Videografi</h3>
-            <p>Setiap momen berharga layak diabadikan dengan sempurna. Dokumentasi event, produk, dan portrait dengan sentuhan artistik.</p>
-            <div class="service-tags">
-              <span>Event</span><span>Portrait</span><span>Produk</span>
-            </div>
+            <h3>Fotografi & Videografi</h3>
+            <p>Dokumentasi event, produk, dan portrait dengan hasil berkualitas tinggi.</p>
           </div>
           <div class="service-card animate-on-scroll">
-            <div class="service-num">04</div>
             <div class="service-icon"><i class="fas fa-microchip"></i></div>
             <h3>Electronics DIY</h3>
-            <p>Proyek elektronika custom yang tak biasa. Dari Arduino hingga modifikasi hardware — solusi inovatif untuk kebutuhan teknis yang spesifik.</p>
-            <div class="service-tags">
-              <span>Arduino</span><span>IoT</span><span>Hardware Mod</span>
-            </div>
+            <p>Proyek elektronika custom, troubleshooting, dan modifikasi hardware.</p>
           </div>
           <div class="service-card animate-on-scroll">
-            <div class="service-num">05</div>
-            <div class="service-icon"><i class="fas fa-desktop"></i></div>
-            <h3>Konsultasi &amp; Rakitan PC</h3>
-            <p>Bingung mau rakit PC tapi takut salah pilih? Konsultasi gratis, rekomendasi tepat, dan perakitan profesional sesuai budget dan kebutuhan.</p>
-            <div class="service-tags">
-              <span>Gaming PC</span><span>Workstation</span><span>Server</span>
-            </div>
+            <div class="service-icon"><i class="fas fa-computer"></i></div>
+            <h3>PC Building</h3>
+            <p>Konsultasi dan perakitan PC gaming, workstation, atau server sesuai kebutuhan.</p>
           </div>
           <div class="service-card animate-on-scroll">
-            <div class="service-num">06</div>
             <div class="service-icon"><i class="fas fa-wrench"></i></div>
-            <h3>Servis &amp; Maintenance</h3>
-            <p>Komputer lemot, laptop mati total, atau hardware bermasalah? Diagnosa tepat, penanganan cepat, solusi terpercaya.</p>
-            <div class="service-tags">
-              <span>Komputer</span><span>Laptop</span><span>Perangkat Elektronik</span>
-            </div>
+            <h3>Service & Maintenance</h3>
+            <p>Servis komputer, laptop, dan perangkat elektronik lainnya.</p>
           </div>
         </div>
       </div>
@@ -416,106 +298,100 @@
 
     <section class="section" id="gallery">
       <div class="container">
-        <div class="section-header animate-on-scroll">
-          <span class="mono-tag">// GALERI PROYEK</span>
-          <h2 class="section-title">Karya &amp; Dokumentasi</h2>
+        <div class="section-header">
+          <span class="section-tag">GALERI PROYEK</span>
+          <h2 class="section-title">Karya & Dokumentasi</h2>
+          <div class="section-divider"></div>
         </div>
         <div class="gallery-scroll-container">
-          <button class="scroll-btn scroll-left" id="galleryScrollLeft" aria-label="Scroll kiri"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-btn scroll-left" id="galleryScrollLeft"><i class="fas fa-chevron-left"></i></button>
           <div class="gallery-scroll" id="galleryScroll"></div>
-          <button class="scroll-btn scroll-right" id="galleryScrollRight" aria-label="Scroll kanan"><i class="fas fa-chevron-right"></i></button>
+          <button class="scroll-btn scroll-right" id="galleryScrollRight"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="partners">
+    <section class="section" id="partners">
       <div class="container">
-        <div class="section-header animate-on-scroll">
-          <span class="mono-tag">// KOLABORASI</span>
-          <h2 class="section-title">Partner &amp; Ekosistem</h2>
+        <div class="section-header">
+          <span class="section-tag">KOLABORASI</span>
+          <h2 class="section-title">Partner & Komunitas</h2>
+          <div class="section-divider"></div>
         </div>
         <div class="partners-scroll-container">
-          <button class="scroll-btn partners-scroll-left" id="partnersScrollLeft" aria-label="Scroll kiri"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-btn partners-scroll-left" id="partnersScrollLeft"><i class="fas fa-chevron-left"></i></button>
           <div class="partners-scroll" id="partnersScroll">
             <div class="partner-card animate-on-scroll" onclick="openConfirmModal('visekaicity')">
               <div class="partner-icon"><i class="fas fa-gamepad"></i></div>
               <h3>VisekaiCity</h3>
-              <p>Komunitas Minecraft yang aktif dan penuh warna — tempat para builder dan petualang berkumpul.</p>
-              <span class="partner-link">Kunjungi <i class="fas fa-arrow-right"></i></span>
+              <p>Komunitas Minecraft yang hangat dan seru</p>
+              <span class="partner-link">Kunjungi →</span>
             </div>
             <div class="partner-card animate-on-scroll" onclick="openConfirmModal('michieworld')">
               <div class="partner-icon"><i class="fas fa-heart"></i></div>
               <h3>MichieWorld</h3>
-              <p>Komunitas dedikasi untuk penggemar Michelle Alexandra — penuh kehangatan dan semangat.</p>
-              <span class="partner-link">Kunjungi <i class="fas fa-arrow-right"></i></span>
+              <p>Komunitas penggemar Michelle Alexandra</p>
+              <span class="partner-link">Kunjungi →</span>
             </div>
             <div class="partner-card animate-on-scroll" onclick="openConfirmModal('uniweeb')">
-              <div class="partner-icon"><i class="fas fa-torii-gate"></i></div>
+              <div class="partner-icon"><i class="fas fa-globe"></i></div>
               <h3>UNIWEEB</h3>
-              <p>Komunitas jejepangan Bandung yang bersemangat — anime, manga, dan budaya Jepang.</p>
-              <span class="partner-link">Kunjungi <i class="fas fa-arrow-right"></i></span>
+              <p>Komunitas jejepangan Bandung</p>
+              <span class="partner-link">Kunjungi →</span>
             </div>
             <div class="partner-card animate-on-scroll" onclick="openConfirmModal('swiftos')">
               <div class="partner-icon"><i class="fas fa-bolt"></i></div>
               <h3>SwiftOS</h3>
-              <p>Sistem operasi simulator berbasis web yang canggih dan intuitif — pengalaman desktop di browser.</p>
-              <span class="partner-link">Kunjungi <i class="fas fa-arrow-right"></i></span>
+              <p>Sistem operasi simulator berbasis web</p>
+              <span class="partner-link">Kunjungi →</span>
             </div>
             <div class="partner-card animate-on-scroll" onclick="openConfirmModal('aikabot')">
               <div class="partner-icon"><i class="fab fa-whatsapp"></i></div>
               <h3>AikaBot</h3>
-              <p>WhatsApp Bot multifungsi yang cerdas — otomatisasi pesan, info, dan hiburan dalam satu genggaman.</p>
-              <span class="partner-link">Hubungi <i class="fas fa-arrow-right"></i></span>
+              <p>WhatsApp Bot multifungsi</p>
+              <span class="partner-link">Hubungi →</span>
             </div>
           </div>
-          <button class="scroll-btn partners-scroll-right" id="partnersScrollRight" aria-label="Scroll kanan"><i class="fas fa-chevron-right"></i></button>
+          <button class="scroll-btn partners-scroll-right" id="partnersScrollRight"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="STN_PROJECT.png" alt="STN PROJECT" class="footer-logo-img">
-          <div>
-            <span class="footer-brand-name">STN PROJECT REBORN</span>
-            <span class="footer-brand-sub">Steven Samuel Setiawan · Bandung, Indonesia</span>
-          </div>
-        </div>
-        <div class="footer-social">
-          <button class="footer-social-icon" onclick="openConfirmModal('instagram')" aria-label="Instagram"><i class="fab fa-instagram"></i></button>
-          <button class="footer-social-icon" onclick="openConfirmModal('tiktok')" aria-label="TikTok"><i class="fab fa-tiktok"></i></button>
-          <button class="footer-social-icon" onclick="openConfirmModal('drive')" aria-label="Google Drive"><i class="fab fa-google-drive"></i></button>
-        </div>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="STN_PROJECT.png" alt="STN PROJECT" class="footer-logo-img">
+        <span>STN PROJECT REBORN</span>
       </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <p class="footer-tagline">Sound Engineer · Server Engineer · Web Developer · Electronics Enthusiast</p>
-        <p class="footer-copyright">© 2026 STN PROJECT REBORN — Dibuat dengan ❤ oleh Steven Samuel Setiawan</p>
+      <p class="footer-text">Sound Engineer • Server Engineer • WebDev</p>
+      <div class="footer-social">
+        <button class="footer-social-icon" onclick="openConfirmModal('instagram')"><i class="fab fa-instagram"></i></button>
+        <button class="footer-social-icon" onclick="openConfirmModal('tiktok')"><i class="fab fa-tiktok"></i></button>
+        <button class="footer-social-icon" onclick="openConfirmModal('drive')"><i class="fab fa-google-drive"></i></button>
       </div>
+      <p class="footer-copyright">© 2026 STN PROJECT REBORN – Created by Steven Samuel Setiawan</p>
     </div>
   </footer>
 
   <div class="confirm-modal" id="confirmModal">
     <div class="confirm-modal-content">
       <div class="confirm-modal-icon">
-        <i class="fas fa-external-link-alt"></i>
+        <i class="fas fa-question-circle"></i>
       </div>
-      <h3 class="confirm-modal-title">Konfirmasi Navigasi</h3>
+      <h3 class="confirm-modal-title">Konfirmasi</h3>
       <p class="confirm-modal-text" id="confirmModalText">Apakah Anda ingin melanjutkan?</p>
       <div class="confirm-modal-buttons">
         <button class="confirm-btn cancel" id="confirmCancelBtn">Batal</button>
         <button class="confirm-btn ok" id="confirmOkBtn">Ya, Lanjutkan</button>
       </div>
-      <button class="confirm-modal-close" id="confirmCloseBtn" aria-label="Tutup"><i class="fas fa-times"></i></button>
+      <button class="confirm-modal-close" id="confirmCloseBtn"><i class="fas fa-times"></i></button>
     </div>
   </div>
 
   <div class="gallery-modal" id="galleryModal">
     <div class="gallery-modal-content">
-      <button class="gallery-modal-close" onclick="closeGalleryModal()" aria-label="Tutup galeri"><i class="fas fa-times"></i></button>
+      <button class="gallery-modal-close" onclick="closeGalleryModal()"><i class="fas fa-times"></i></button>
       <div class="gallery-modal-image">
         <img id="galleryModalImage" src="" alt="">
       </div>
