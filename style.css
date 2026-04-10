@@ -30,17 +30,18 @@ body {
 
 .navbar {
   position: fixed;
-  top: -2px;
+  top: 0;
   left: 0;
   right: 0;
-  padding: 20px 0 18px;
-  background: rgba(10, 10, 26, 0.6);
+  padding: 18px 0;
+  background: rgba(10, 10, 26, 0.75);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-top: 2px solid transparent;
+  border-top: 3px solid rgba(10, 10, 26, 0.95);
   border-bottom: 1px solid rgba(96, 165, 250, 0.15);
   z-index: 1000;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .nav-container {
@@ -62,6 +63,8 @@ body {
   position: relative;
   width: 48px;
   height: 48px;
+  overflow: hidden;
+  border-radius: 14px;
 }
 
 .logo-glow {
