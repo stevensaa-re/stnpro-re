@@ -20,7 +20,7 @@ body {
   position: fixed;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -112,9 +112,8 @@ body {
 
 .brand-role {
   font-size: 0.65rem;
-  opacity: 0.8;
+  opacity: 0.6;
   letter-spacing: 0.5px;
-  font-weight: 500;
 }
 
 .nav-actions {
@@ -860,13 +859,13 @@ body {
   line-height: 1.6;
 }
 
-.horizontal-scroll-container {
+.gallery-scroll-container {
   position: relative;
   overflow: visible;
   padding: 0 50px;
 }
 
-.horizontal-scroll {
+.gallery-scroll {
   display: flex;
   gap: 25px;
   overflow-x: auto;
@@ -875,16 +874,16 @@ body {
   padding-bottom: 20px;
 }
 
-.horizontal-scroll::-webkit-scrollbar {
+.gallery-scroll::-webkit-scrollbar {
   height: 8px;
 }
 
-.horizontal-scroll::-webkit-scrollbar-track {
+.gallery-scroll::-webkit-scrollbar-track {
   background: rgba(96, 165, 250, 0.1);
   border-radius: 10px;
 }
 
-.horizontal-scroll::-webkit-scrollbar-thumb {
+.gallery-scroll::-webkit-scrollbar-thumb {
   background: linear-gradient(90deg, #60a5fa, #a78bfa);
   border-radius: 10px;
 }
@@ -954,6 +953,42 @@ body {
 }
 
 .scroll-right {
+  right: 0;
+}
+
+.partners-scroll-container {
+  position: relative;
+  overflow: visible;
+  padding: 0 50px;
+}
+
+.partners-scroll {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.partners-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.partners-scroll::-webkit-scrollbar-track {
+  background: rgba(96, 165, 250, 0.1);
+  border-radius: 10px;
+}
+
+.partners-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  border-radius: 10px;
+}
+
+.partners-scroll-left {
+  left: 0;
+}
+
+.partners-scroll-right {
   right: 0;
 }
 
@@ -1350,15 +1385,20 @@ body {
     display: none;
   }
   
-  .horizontal-scroll-container {
+  .brand-role {
+    display: none;
+  }
+  
+  .gallery-scroll-container,
+  .partners-scroll-container {
     padding: 0 40px;
   }
   
-  .scroll-left {
+  .scroll-left, .partners-scroll-left {
     left: 0;
   }
   
-  .scroll-right {
+  .scroll-right, .partners-scroll-right {
     right: 0;
   }
   
@@ -1394,7 +1434,8 @@ body {
     width: 260px;
   }
   
-  .horizontal-scroll-container {
+  .gallery-scroll-container,
+  .partners-scroll-container {
     padding: 0 35px;
   }
   
