@@ -110,6 +110,12 @@ body {
   letter-spacing: 2px;
 }
 
+.brand-role {
+  font-size: 0.65rem;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+}
+
 .nav-actions {
   display: flex;
   gap: 15px;
@@ -299,28 +305,6 @@ body {
   max-width: 500px;
   margin-bottom: 35px;
   line-height: 1.6;
-}
-
-.hero-stats {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #60a5fa;
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  opacity: 0.7;
 }
 
 .hero-buttons {
@@ -1100,10 +1084,6 @@ body {
     margin-right: auto;
   }
   
-  .hero-stats {
-    justify-content: center;
-  }
-  
   .hero-buttons {
     justify-content: center;
   }
@@ -1129,6 +1109,10 @@ body {
   .floating-card {
     display: none;
   }
+  
+  .brand-role {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1146,14 +1130,6 @@ body {
   
   .container {
     padding: 0 20px;
-  }
-  
-  .hero-stats {
-    gap: 25px;
-  }
-  
-  .stat-number {
-    font-size: 1.5rem;
   }
 }
 
@@ -1203,4 +1179,22 @@ body.light-mode .mobile-link {
 body.light-mode .floating-card {
   background: rgba(255, 255, 255, 0.9);
   color: #1a1a2e;
+}
+
+.navbar.scrolled {
+  padding: 12px 0;
+  background: rgba(5, 5, 15, 0.95);
+}
+
+body.light-mode .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.gallery-modal.closing {
+  animation: fadeOut 0.3s ease;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
