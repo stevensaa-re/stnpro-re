@@ -126,8 +126,8 @@
     donate: { title: 'Sociabuzz', url: 'https://sociabuzz.com/stvnn_saaa/tribe' },
     visekaicity: { title: 'VisekaiCity', url: 'https://stevensaa-re.github.io/VisekaiCity-OFC/' },
     michieworld: { title: 'MichieWorld', url: 'https://stevensaa-re.github.io/MichieWorld/' },
-    uniweeb: { title: 'UNIWEEB', url: 'https://uniweeb.vercel.app/' },
-    swiftos: { title: 'SwiftOS', url: 'https://stevensaa-re.github.io/SwiftOS/' },
+    uniweeb: { title: 'UNIWEEB', url: 'https://uniweeb.base44.app/' },
+    swiftos: { title: 'SwiftOS', url: 'https://swiftos.base44.app' },
     aikabot: { title: 'AikaBot', url: 'https://wa.me/6285117573210' }
   };
 
