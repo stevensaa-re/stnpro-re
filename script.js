@@ -172,7 +172,7 @@
   const galleryData = [
     { title: 'PC Server (Lama)', image: 'foto 1.jpg', description: 'PC server pertama yang saya gunakan. Spek low end namun cukup untuk kebutuhan belajar dan eksperimen.' },
     { title: 'Laptop Rusak → All-In-One PC', image: 'foto 10.jpeg', description: 'Mengubah laptop rusak menjadi PC All-In-One. Lumayan untuk monitoring server.' },
-    { title: 'PC Server Sekarang', image: 'foto 11.jpeg', description: 'PC server saat ini: Intel Core i7-2600, RAM 8GB DDR3, SSD 120GB (Ubuntu Server), HDD 160GB + 1TB.' },
+    { title: 'PC Server Sekarang', image: 'foto 11.jpeg', description: 'PC server saat ini: Intel XEON X3440, RAM 8GB DDR3, SSD 120GB (Proxmox), HDD 1TB.' },
     { title: 'Kameramen Livestream Gereja', image: 'foto 12.jpeg', description: 'Pelayanan di gereja sebagai kameramen untuk livestream ibadah.' },
     { title: 'PC Custom di Laci Meja', image: 'foto 2.jpg', description: 'Proyek iseng merakit PC di dalam laci meja. Hasilnya suhu lumayan tinggi tapi fun!' },
     { title: 'Glances Monitoring', image: 'foto 3.jpg', description: 'Sistem monitoring untuk PC server yang bisa diakses dari mana saja.' },
