@@ -354,6 +354,16 @@ body::before {
   position: relative;
 }
 
+.hero-slogan {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  animation: rise 0.8s var(--ease) 0.05s both;
+}
+
 .hero-desc {
   color: var(--muted);
   font-size: 1.02rem;
@@ -1353,6 +1363,13 @@ main { counter-reset: sig; }
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.footer-slogan {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
 }
 
 .footer-social { display: flex; gap: 10px; margin: 6px 0; }
