@@ -120,6 +120,7 @@
   const socialLinks = {
     instagram: { title: 'Instagram', url: 'https://www.instagram.com/stvnn_saa?igsh=MTBxcngzOHU5cTIycg==' },
     instagramProjek: { title: 'Instagram Proyek', url: 'https://www.instagram.com/stvnn.saa?igsh=MXd1dmtvbXBhaTFkag==' },
+    instagramStn: { title: 'Instagram STN Project Reborn', url: 'https://www.instagram.com/stnpro_re' },
     tiktok: { title: 'TikTok', url: 'https://www.tiktok.com/@stvnn_saa?_r=1&_t=ZS-95PORgi1v89' },
     drive: { title: 'Google Drive', url: 'https://drive.google.com/drive/folders/1DAQ0gYOpDKs4XM1JHrKLWf4Y5UJ3PSS3?usp=drive_link' },
     donate: { title: 'Sociabuzz', url: 'https://sociabuzz.com/stvnn_saaa/tribe' },
