@@ -130,7 +130,9 @@
     swiftos: { title: 'SwiftOS', url: 'https://swiftos.base44.app' },
     aikabot: { title: 'AikaBot', url: 'https://wa.me/6285722030679' },
     waAdmin: { title: 'WhatsApp Admin STN Project Reborn', url: 'https://wa.me/6285117499784' },
-    telegramKaoruko: { title: 'Kaoruko Waguri Bot', url: 'https://t.me/KaorukooWagurii_bot' }
+    telegramKaoruko: { title: 'Kaoruko Waguri Bot', url: 'https://t.me/KaorukooWagurii_bot' },
+    sssiTiktok: { title: 'TikTok Sedulur Sound System Indonesia', url: 'https://tiktok.com/@sssi.ofc' },
+    sssiWhatsapp: { title: 'Grup WhatsApp Sedulur Sound System Indonesia', url: 'https://chat.whatsapp.com/IrDxqFBn5K8EtlD0IQvde1?mode=gi_t' }
   };
 
   function closeConfirmModal() {
@@ -185,11 +187,33 @@
     if (e.target === telegramModal) closeTelegramModal();
   });
 
+  const sssiModal = document.getElementById('sssiModal');
+  const sssiCloseBtn = document.getElementById('sssiCloseBtn');
+
+  function openSssiModal() {
+    sssiModal?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSssiModal() {
+    sssiModal?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  window.openSssiModal = openSssiModal;
+  window.closeSssiModal = closeSssiModal;
+
+  sssiCloseBtn?.addEventListener('click', closeSssiModal);
+  sssiModal?.addEventListener('click', (e) => {
+    if (e.target === sssiModal) closeSssiModal();
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (confirmModal?.classList.contains('active')) closeConfirmModal();
       if (galleryModal?.classList.contains('active')) closeGalleryModal();
       if (telegramModal?.classList.contains('active')) closeTelegramModal();
+      if (sssiModal?.classList.contains('active')) closeSssiModal();
     }
   });
 
