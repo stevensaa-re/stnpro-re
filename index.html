@@ -320,6 +320,12 @@
               <p>Komunitas jejepangan Bandung</p>
               <span class="partner-link">Kunjungi →</span>
             </div>
+            <div class="partner-card animate-on-scroll" onclick="openSssiModal()">
+              <div class="partner-icon"><i class="fas fa-volume-high"></i></div>
+              <h3>Sedulur Sound System Indonesia</h3>
+              <p>Owner dari salah satu Komunitas Sound System Se-Indonesia</p>
+              <span class="partner-link">Kunjungi →</span>
+            </div>
           </div>
           <button class="scroll-btn partners-scroll-right" id="partnersScrollRight" aria-label="Geser kanan"><i class="fas fa-chevron-right"></i></button>
         </div>
@@ -468,6 +474,31 @@
             <p>Bot chat berbasis CharacterAI di Telegram.</p>
           </div>
           <span class="telegram-item-badge">Segera hadir</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-modal" id="sssiModal">
+    <div class="project-modal-content">
+      <button class="project-modal-close" id="sssiCloseBtn" aria-label="Tutup"><i class="fas fa-times"></i></button>
+      <h3 class="project-modal-title">Sedulur Sound System Indonesia</h3>
+      <p class="project-modal-subtitle">Pilih salah satu untuk membukanya.</p>
+      <div class="telegram-list">
+        <button class="telegram-item" onclick="closeSssiModal(); openConfirmModal('sssiTiktok')">
+          <div class="project-icon"><i class="fab fa-tiktok"></i></div>
+          <div class="telegram-item-text">
+            <h4>TikTok</h4>
+            <p>@sssi.ofc</p>
+          </div>
+        </button>
+        <button class="telegram-item" onclick="closeSssiModal(); openConfirmModal('sssiWhatsapp')">
+          <div class="project-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="telegram-item-text">
+            <h4>Grup WhatsApp</h4>
+            <p>Gabung ke grup komunitas</p>
+          </div>
+        </button>
         </div>
       </div>
     </div>
